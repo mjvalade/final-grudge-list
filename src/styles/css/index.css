@@ -115,12 +115,10 @@ body {
 .app {
   display: flex;
   align-items: center;
-  width: 65%;
-  margin: auto; }
+  width: 65%; }
 
 .dashboard {
   display: flex;
-  align-items: center;
   width: 75%; }
 
 /*# sourceMappingURL=index.css.map */

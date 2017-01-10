@@ -11,9 +11,10 @@ class NewGrudgeForm extends Component {
   }
 
   getGrudges() {
-    axios.get(`/grudges`)
+    axios.get('/grudges')
     .then((response) => {
-      // this.setState({grudgesList: response.data.grudges});
+      this.setState({grudgesList: response.data.grudges});
+      console.log(this.state.grudgesList);
     })
     .catch((error) => {
       console.log(error);
@@ -25,7 +26,7 @@ class NewGrudgeForm extends Component {
       name: this.storeName.value,
       description: this.storeDescription.value
     };
-    axios.post(`/post`, {
+    axios.post('/post', {
       grudge
     })
     .then((response) => {
@@ -39,7 +40,7 @@ class NewGrudgeForm extends Component {
   }
 
   // clearInputs() {
-  //  this.setState
+  //  this.setState({  });
   // }
 
   componentDidMount() {
@@ -82,13 +83,13 @@ class NewGrudgeForm extends Component {
               className="save-button"
               value="Save"
             />
-            <input
+            <button
               className="clear-button"
-              value="Clear"
               onClick={(e) => {
                 e.preventDefault()
                 this.clearInputs()}}
-            />
+            > Clear
+            </button>
           </article>
         </form>
       </section>

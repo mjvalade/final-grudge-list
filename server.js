@@ -28,8 +28,8 @@ app.post('/api/post', (request, response) => {
 
   let obj = {};
   obj.id = Date.now();
-  obj.name = name;
-  obj.count = 0;
+  obj.name = grudge.name;
+  obj.description = grudge.description;
 
   app.locals.grudges.push(obj);
   response.status(201).json(obj.id);

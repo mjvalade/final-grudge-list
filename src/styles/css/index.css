@@ -69,12 +69,23 @@ input[type=range]::-ms-track {
   color: transparent; }
 
 .header {
-  align-items: center; }
+  text-align: center;
+  align-content: center;
+  height: 75px;
+  border-bottom: 1px solid black; }
 
 .header-title {
   color: red; }
 
+.sidebar {
+  background: green;
+  width: 200px;
+  height: 100vh; }
+
 body {
   font-family: sans-serif; }
+
+.dashboard {
+  display: flex; }
 
 /*# sourceMappingURL=index.css.map */

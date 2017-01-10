@@ -1,5 +1,19 @@
 @import '_reset';
+@import '_header';
+@import '_sidebar';
+@import '_main-container';
+@import '_new-form';
+@import '_detail';
 
 body {
   font-family: sans-serif;
+}
+
+.app {
+
+}
+
+.dashboard {
+  display: flex;
+  margin: auto;
 }

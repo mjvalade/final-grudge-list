@@ -68,7 +68,30 @@ input[type=range]::-ms-track {
   border-color: transparent;
   color: transparent; }
 
+.header {
+  text-align: center;
+  align-content: center;
+  height: 75px;
+  border-bottom: 1px solid black; }
+
+.header-title {
+  color: red; }
+
+.sidebar {
+  background: green;
+  width: 200px;
+  height: 100vh; }
+
+.main {
+  margin: auto;
+  margin-bottom: 300px;
+  text-align: center; }
+
 body {
   font-family: sans-serif; }
+
+.dashboard {
+  display: flex;
+  margin: auto; }
 
 /*# sourceMappingURL=index.css.map */

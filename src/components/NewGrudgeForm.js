@@ -10,18 +10,21 @@ class NewGrudgeForm extends Component {
     };
   }
 
-  getGrudges() {
-    axios.get('/grudges')
-    .then((response) => {
-      this.setState({grudgesList: response.data.grudges});
-      console.log(this.state.grudgesList);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  }
+  // getGrudges() {
+  //   axios.get('/grudges')
+  //   .then((response) => {
+  //     this.setState({grudgesList: response.data.grudges});
+  //     console.log(this.state.grudgesList);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
+  // }
 
   postNewGrudge() {
+    // const { grudgesList } = this.state;
+    const { getGrudges } = this.props;
+
     let grudge = {
       name: this.storeName.value,
       description: this.storeDescription.value
@@ -30,8 +33,8 @@ class NewGrudgeForm extends Component {
       grudge
     })
     .then((response) => {
-      // this.setState({grudgesList: "http://localhost:3001/api/" + response.data});
-      this.getGrudges();
+      this.setState({grudgesList: "http://localhost:3001/api/" + response.data});
+      getGrudges();
     })
     .catch((error) => {
       console.log(error);
@@ -43,9 +46,9 @@ class NewGrudgeForm extends Component {
   //  this.setState({  });
   // }
 
-  componentDidMount() {
-    this.getGrudges();
-  }
+  // componentDidMount() {
+  //   this.getGrudges();
+  // }
 
   render() {
     let input;

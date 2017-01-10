@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Grudge extends Component {
+const Grudge = (grudge) => {
 
-  render() {
-    return(
-      <section className="grudge">
-        <h2 className="grudge-name">Name</h2>
-        <p className="grudge-description">Description</p>
-      </section>
-    )
-  }
+  return(
+    <section className="grudge">
+      <h2 className="grudge-name">{grudge.name}</h2>
+      <p className="grudge-description">{grudge.description}</p>
+    </section>
+  )
 }
 
 export default Grudge;

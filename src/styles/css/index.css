@@ -82,10 +82,16 @@ input[type=range]::-ms-track {
   width: 200px;
   height: 100vh; }
 
+.main {
+  margin: auto;
+  margin-bottom: 300px;
+  text-align: center; }
+
 body {
   font-family: sans-serif; }
 
 .dashboard {
-  display: flex; }
+  display: flex;
+  margin: auto; }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/css/index.css';
 
-import NameList from './NameList';
 import MainContainer from './MainContainer';
 
 class App extends Component {
@@ -9,7 +8,6 @@ class App extends Component {
     return (
       <div className="app">
         <div className="dashboard">
-          <NameList />
           <MainContainer />
         </div>
       </div>

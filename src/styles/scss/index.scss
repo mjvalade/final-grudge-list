@@ -10,10 +10,15 @@ body {
 }
 
 .app {
-
+  display: flex;
+  align-items: center;
+  width: 65%;
+  margin: auto;
 }
 
 .dashboard {
   display: flex;
-  margin: auto;
+  // flex-direction: column;
+  align-items: center;
+  width: 75%;
 }

@@ -112,8 +112,15 @@ input[type=range]::-ms-track {
 body {
   font-family: sans-serif; }
 
+.app {
+  display: flex;
+  align-items: center;
+  width: 65%;
+  margin: auto; }
+
 .dashboard {
   display: flex;
-  margin: auto; }
+  align-items: center;
+  width: 75%; }
 
 /*# sourceMappingURL=index.css.map */

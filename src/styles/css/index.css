@@ -68,6 +68,12 @@ input[type=range]::-ms-track {
   border-color: transparent;
   color: transparent; }
 
+.header {
+  align-items: center; }
+
+.header-title {
+  color: red; }
+
 body {
   font-family: sans-serif; }
 

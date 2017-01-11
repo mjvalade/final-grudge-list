@@ -1,0 +1,26 @@
+.new-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+}
+
+.new-form-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-input {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+}

@@ -13,12 +13,12 @@ class Header extends Component {
             Final Grudge List
           </Link>
         </h2>
-        <Link
+        {/* <Link
           to="/NewGrudge"
           className=""
         >
           ADD NEW GRUDGE
-        </Link>
+        </Link> */}
       </header>
     )
   }

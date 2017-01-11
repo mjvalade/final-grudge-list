@@ -3,8 +3,7 @@ import { render } from 'react-dom';
 
 import App from './components/App';
 import Header from './components/Header';
-import NameList from './components/NameList';
-import NewGrudgeForm from './components/NewGrudgeForm';
+// import NewGrudgeForm from './components/NewGrudgeForm';
 import GrudgeDetail from './components/GrudgeDetail';
 import NoMatch from './components/NoMatch';
 import './styles/css/index.css';
@@ -16,14 +15,12 @@ const Root = () => {
     <BrowserRouter>
       <div>
         <Header />
-        <div className="dashboard">
-          <NameList />
+        {/* <div className="dashboard"> */}
           <Match exactly pattern="/" component={App} />
-          <Match exactly pattern="/NewGrudge" component={NewGrudgeForm} />
+          {/* <Match exactly pattern="/NewGrudge" component={NewGrudgeForm} /> */}
           <Match pattern="/Grudge/:name" component={GrudgeDetail} />
-          {/* ^^ may need to switch out for container */}
           <Miss component={NoMatch} />
-        </div>
+        {/* </div> */}
       </div>
     </BrowserRouter>
   )

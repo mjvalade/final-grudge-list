@@ -30,6 +30,7 @@ app.post('/api/post', (request, response) => {
   obj.id = Date.now();
   obj.name = grudge.name;
   obj.description = grudge.description;
+  obj.forgiven = false;
 
   app.locals.grudges.push(obj);
   response.status(201).json(obj.id);

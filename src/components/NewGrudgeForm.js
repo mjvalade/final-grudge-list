@@ -10,19 +10,7 @@ class NewGrudgeForm extends Component {
     };
   }
 
-  // getGrudges() {
-  //   axios.get('/grudges')
-  //   .then((response) => {
-  //     this.setState({grudgesList: response.data.grudges});
-  //     console.log(this.state.grudgesList);
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   });
-  // }
-
   postNewGrudge() {
-    // const { grudgesList } = this.state;
     const { getGrudges } = this.props;
 
     let grudge = {
@@ -43,11 +31,8 @@ class NewGrudgeForm extends Component {
   }
 
   // clearInputs() {
-  //  this.setState({  });
-  // }
-
-  // componentDidMount() {
-  //   this.getGrudges();
+  //   const { draftGrudge } = this.state;
+  //   this.setState({ draftGrudge: '' });
   // }
 
   render() {
@@ -59,7 +44,8 @@ class NewGrudgeForm extends Component {
         <form className="input-form"
           onSubmit={(e) => {
             e.preventDefault()
-            this.postNewGrudge()}}>
+            this.postNewGrudge()
+        }}>
           <label>
             Name:
             <input
@@ -72,11 +58,11 @@ class NewGrudgeForm extends Component {
           </label>
           <label>
             What they did:
-            <textarea
+            <input
               type="text"
               name="title"
               className="new-input reason"
-              placeholder="Why should they go play in traffic?"
+              placeholder="Go play in traffic!"
               ref={(node) => this.storeDescription = node}
             />
           </label>

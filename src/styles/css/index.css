@@ -69,18 +69,60 @@ input[type=range]::-ms-track {
   color: transparent; }
 
 .header {
-  text-align: center;
-  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 75px;
-  border-bottom: 1px solid black; }
+  background: black; }
 
 .header-title {
-  color: red; }
+  color: orange;
+  font-size: 1.5em;
+  text-decoration: none; }
 
 .sidebar {
-  background: green;
-  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: orange;
+  width: 225px;
   height: 100vh; }
+
+.sidebar-title {
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.grudge-list {
+  margin-top: 10px; }
+
+.grudge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: grey;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 20px; }
+
+.grudge-name {
+  margin-bottom: 10px;
+  color: white; }
+
+.forgive-button {
+  background: black;
+  border: 2px solid orange;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 100;
+  color: orange;
+  cursor: pointer;
+  width: 85px;
+  height: 30px; }
+  .forgive-button:hover {
+    background: orange;
+    border: 2px solid black;
+    color: black; }
 
 .main {
   margin: auto;
@@ -91,10 +133,9 @@ input[type=range]::-ms-track {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 75%; }
+  text-align: center; }
 
 .new-form-title {
-  text-align: center;
   margin-top: 10px;
   margin-bottom: 30px;
   font-size: 2em; }
@@ -104,18 +145,37 @@ input[type=range]::-ms-track {
   flex-direction: column; }
 
 .new-input {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  margin-left: 5px; }
 
 .buttons {
   margin-top: 20px; }
+
+.save-button,
+.clear-button {
+  background: orange;
+  border: 2px solid black;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 100;
+  color: black;
+  cursor: pointer;
+  width: 85px;
+  height: 30px; }
+  .save-button:hover,
+  .clear-button:hover {
+    background: black;
+    border: 2px solid orange;
+    color: orange; }
+
+.clear-button {
+  margin-left: 10px; }
 
 body {
   font-family: sans-serif; }
 
 .app {
-  display: flex;
-  align-items: center;
-  width: 65%; }
+  display: flex; }
 
 .dashboard {
   display: flex;

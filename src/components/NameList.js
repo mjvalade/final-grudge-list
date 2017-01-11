@@ -15,7 +15,7 @@ const displayGrudges = (grudges) => {
       <li key={g.id} className="grudge" onClick={(e) => { this.goToDetails() }}>
         <h2 className="grudge-name">{g.name}</h2>
         {/* <p className="grudge-description">{g.description}</p> */}
-        <button>Forgive</button>
+        <button className="forgive-button">Forgive</button>
       </li>
     )
   });
@@ -44,7 +44,7 @@ const NameList = (props) => {
       <p>Total Grudges: {totalGrudges(grudges)}</p>
       <p>Hopeless: {hopeless(grudges)}</p>
       <p>Redeemed: {totalGrudges(grudges)}</p>
-      <ul>
+      <ul className="grudge-list">
         {displayGrudges(grudges)}
       </ul>
     </section>

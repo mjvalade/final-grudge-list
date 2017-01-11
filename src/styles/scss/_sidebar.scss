@@ -1,5 +1,50 @@
 .sidebar {
-  background: green;
-  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: orange;
+  width: 225px;
   height: 100vh;
+}
+
+.sidebar-title {
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.grudge-list {
+  margin-top: 10px;
+}
+
+.grudge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: grey;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.grudge-name {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.forgive-button {
+  background: black;
+  border: 2px solid orange;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 100;
+  color: orange;
+  cursor: pointer;
+  width: 85px;
+  height: 30px;
+  &:hover {
+    background: orange;
+    border: 2px solid black;
+    color: black;
+  }
 }

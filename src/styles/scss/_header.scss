@@ -1,12 +1,13 @@
 .header {
-  // display: flex;
-  // flex-direction: row;
-  text-align: center;
-  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 75px;
-  border-bottom: 1px solid black;
+  background: black;
 }
 
 .header-title {
-  color: red;
+  color: orange;
+  font-size: 1.5em;
+  text-decoration: none;
 }

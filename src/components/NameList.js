@@ -1,24 +1,13 @@
 import React from 'react';
-
-const goToDetails = () => {
-  let str = this.props.name;
-  let grudgeName = str.replace(/\s/g, '-');
-  this.props.setSelectedTrail(this.props.uid);
-  this.context.router.transitionTo(`/Grudge/${grudgeName}`);
-};
+import Grudge from './Grudge';
 
 const displayGrudges = (grudges) => {
-    // const { grudges } = this.props;
-    // const grudgeId = grudge.id;
-  return grudges.map(g => {
-    return(
-      <li key={g.id} className="grudge" onClick={(e) => { this.goToDetails() }}>
-        <h2 className="grudge-name">{g.name}</h2>
-        {/* <p className="grudge-description">{g.description}</p> */}
-        <button className="forgive-button">Forgive</button>
-      </li>
+
+  return grudges.map(grudge => {
+    return (
+      <Grudge key={grudge.id} {...grudge}/>
     )
-  });
+  })
 }
 
 const totalGrudges = (grudges) => {
@@ -34,7 +23,6 @@ const hopeless = (grudges) => {
   console.log("hopeless", hopeless);
 }
 
-
 const NameList = (props) => {
   const grudges = props.grudges;
 
@@ -44,9 +32,9 @@ const NameList = (props) => {
       <p>Total Grudges: {totalGrudges(grudges)}</p>
       <p>Hopeless: {hopeless(grudges)}</p>
       <p>Redeemed: {totalGrudges(grudges)}</p>
-      <ul className="grudge-list">
+      <section className="grudge-list">
         {displayGrudges(grudges)}
-      </ul>
+      </section>
     </section>
   )
 }

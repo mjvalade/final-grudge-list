@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-
 class NewGrudgeForm extends Component {
   constructor() {
     super();
     this.state = {
-      grudgesList: [],
+      grudgesList: []
     };
   }
 
@@ -23,6 +22,7 @@ class NewGrudgeForm extends Component {
     .then((response) => {
       this.setState({grudgesList: "http://localhost:3001/api/" + response.data});
       getGrudges();
+      this.clearInputs();
     })
     .catch((error) => {
       console.log(error);
@@ -30,17 +30,15 @@ class NewGrudgeForm extends Component {
     });
   }
 
-  // clearInputs() {
-  //   const { draftGrudge } = this.state;
-  //   this.setState({ draftGrudge: '' });
-  // }
+  clearInputs() {
+    this.storeName.value = '';
+    this.storeDescription.value = '';
+  }
 
   render() {
-    let input;
-
     return(
-      <section className="new-form">
-        <h1 className="new-form-title">Add yet another grudge to yer list!</h1>
+      <footer className="new-form">
+        <h1 className="new-form-title">Add another grudge to yer list!</h1>
         <form className="input-form"
           onSubmit={(e) => {
             e.preventDefault()
@@ -81,7 +79,7 @@ class NewGrudgeForm extends Component {
             </button>
           </article>
         </form>
-      </section>
+      </footer>
     )
   }
 }

@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Grudge = (grudge) => {
 
   return(
-    <section className="grudge">
-      <h2 className="grudge-name">{grudge.name}</h2>
-      <p className="grudge-description">{grudge.description}</p>
-    </section>
+    <Link to={`/Grudge/${grudge.name}`}>
+      <section className="grudge">
+          <h2 className="grudge-name">{grudge.name}</h2>
+      </section>
+    </Link>
   )
 }
 

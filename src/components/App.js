@@ -25,27 +25,6 @@ class App extends Component {
     });
   }
 
-  // postNewGrudge() {
-  //   let grudge = {
-  //     name: this.storeName.value,
-  //     description: this.storeDescription.value
-  //   };
-  //   axios.post('/post', {
-  //     grudge
-  //   })
-  //   .then((response) => {
-  //     // this.setState({grudgesList: "http://localhost:3001/api/" + response.data});
-  //     this.getGrudges();
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //     this.setState({grudgesList: error});
-  //   });
-  // }
-
-  // clearInputs() {
-  //  this.setState({  });
-  // }
 
   componentDidMount() {
     this.getGrudges();
